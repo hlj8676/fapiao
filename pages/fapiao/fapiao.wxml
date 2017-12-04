@@ -2,8 +2,7 @@
   <view class="tr bg-w">
     <view class="th">发票号码</view>
     <view class="th">开票日期</view>
-    <view class="th ">金额</view>
-  
+    <view class="th ">金额未含税</view>
   </view>
   <block wx:for="{{listData}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
