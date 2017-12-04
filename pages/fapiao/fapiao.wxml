@@ -1,7 +1,22 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <!-- <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block> -->
-  <button type='default' bindtap='clickButton'>扫描</button>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">发票号码</view>
+    <view class="th">开票日期</view>
+    <view class="th ">金额</view>
+  
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.codeDate}}</view>
+      <view class="td">{{item.money}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.codeDate}}</view>
+      <view class="td">{{item.money}}</view>
+    </view>
+  </block>
+
+  <button style='primary' bindtap='clickButton'>扫描</button>
 </view>

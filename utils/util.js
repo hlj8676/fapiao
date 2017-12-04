@@ -1,3 +1,10 @@
+
+//是否为中文
+function sliceStr(str) {
+  
+  return str;
+}
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
