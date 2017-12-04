@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/fapiao/fapiao"
+    
+    
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "pages/image/1.png",
+      "selectedIconPath": "pages/image/11.png"
+    },{
+      "pagePath": "pages/fapiao/fapiao",
+      "text": "扫描",
+      "iconPath": "pages/image/2.png",
+      "selectedIconPath": "pages/image/22.png"
+    },
+    {
+      "pagePath": "pages/wode/wode",
+      "text": "我的",
+      "iconPath": "pages/image/3.png",
+      "selectedIconPath": "pages/image/33.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
