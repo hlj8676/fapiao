@@ -79,15 +79,22 @@ Page({
 
 
          var arr = res.result.split(",");
+         if (arr.length == 8)
+         {
+           // console.log("发票代码：", arr[0]+arr[1]+arr[2]);
+           // console.log("发票号码：", arr[3]);
+           // console.log("发票金额：", arr[4]);
+           // console.log("开票日期：", arr[5]);
+           // console.log("校验码：", arr[6]);
+           // console.log("随机码：", arr[7]);
+           var total = arr[4] * 1.11
+           addTable(this, arr[3], arr[5], arr[4]); 
+         }
+         else
+         {
+           console.log("无法识别", res.result)
+         }
 
-        // console.log("发票代码：", arr[0]+arr[1]+arr[2]);
-        // console.log("发票号码：", arr[3]);
-        // console.log("发票金额：", arr[4]);
-        // console.log("开票日期：", arr[5]);
-        // console.log("校验码：", arr[6]);
-        // console.log("随机码：", arr[7]);
-         var total = arr[4]*1.11
-         addTable(this, arr[3], arr[5], arr[4] ); 
       }
     })
   },
