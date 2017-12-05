@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/scroll/scroll",
     "pages/index/index",
     "pages/fapiao/fapiao",
-    "pages/wode/wode",
-    "pages/scroll/scroll"
+    "pages/wode/wode"
     
   ],
   "tabBar": {

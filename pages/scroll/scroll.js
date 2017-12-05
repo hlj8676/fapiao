@@ -1,37 +1,25 @@
-var order = ['red', 'yellow', 'blue', 'green', 'red']
+var idinfolist = [
+  { "code": "12345678", "text": '' },
+  { "code": "省", "text": '' },
+  { "code": "市", "text": '' },
+  { "code": "县", "text": '' },
+  { "code": "性别", "text": '' },
+  { "code": "出生年月", "text": '' },
+  { "code": "地址", "text": '' }
+]
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    toView: 'green',
-    scrollTop: 100,
-    scrollLeft: 0
-  },
-  //滚动条滚到顶部的时候触发
-  upper: function (e) {
-    console.log(e)
-  },
-  //滚动条滚到底部的时候触发
-  lower: function (e) {
-    console.log(e)
-  },
-  //滚动条滚动后触发
-  scroll: function (e) {
-    console.log(e)
-  },
-  //点击按钮切换到下一个view
-  tap: function (e) {
-    for (var i = 0; i < order.length; ++i) {
-      if (order === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
-      }
-    }
-  },
-  //通过设置滚动条位置实现画面滚动
-  tapMove: function (e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
-    })
+    
+    listData: idinfolist,
+    inputValue: '', //用于显示输入语句  
+    searchinput: '', //用户输入的查询语句  
+
+    
   }
+ 
 })
+ 

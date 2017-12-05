@@ -1,9 +1,17 @@
 <view class="table">
-  <view class="tr bg-w">
+  <!-- <view class="tr bg-w">
     <view class="th">发票号码</view>
     <view class="th">开票日期</view>
     <view class="th ">金额未含税</view>
-  </view>
+  </view> -->
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+    <view style="width: 100px; height: 40px; display: inline-block" class="th">发票号码</view>
+    <view style="width: 100px; height: 40px; display: inline-block" class="th">开票日期</view>
+    <view style="width: 100px; height: 40px; display: inline-block" class="th ">金额未含税</view>
+    <view style="width: 100px; height: 40px; display: inline-block" class="th ">随机码</view>
+</scroll-view>
+
+
   <block wx:for="{{listData}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.code}}</view>

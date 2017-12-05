@@ -1,10 +1,25 @@
-<scroll-view scroll-y="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view id="green" class="scroll-view-item bc_green"></view>
-    <view id="red"  class="scroll-view-item bc_red"></view>
-    <view id="yellow" class="scroll-view-item bc_yellow"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-</scroll-view>
-<view class="btn-area">
-      <button size="mini" bindtap="tap">click me to scroll into view </button>
-      <button size="mini" bindtap="tapMove">click me to scroll</button>
-</view>
+<view class="table">  
+  <view class="tr bg-w">  
+    <view class="th">发票号码</view>  
+    <view class="th-2">开票日期</view>  
+    <view class="th-3">金额未含税</view>
+    <view class="th-4">随机码</view>
+  </view>  
+  <block wx:for="{{listData}}" wx:key="{{code}}">  
+
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">  
+      <view class="td-1" selectable="true">{{item.code}}</view>  
+      <view class="td-2" selectable="true" scroll-y="true" >  
+        <text class="th-text"  style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>  
+      </view>  
+    </view>  
+
+    <view class="tr bg-g2" wx:else>  
+      <view class="td-1" selectable="true">{{item.code}}</view>  
+      <view class="td-2" selectable="true"  scroll-y="true" >  
+        <text class="th-text"  style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>  
+      </view>  
+    </view>  
+
+  </block>  
+</view>  
